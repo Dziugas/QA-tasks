@@ -8,11 +8,12 @@ from selenium.webdriver.chrome.options import Options
 
 
 headless_options = Options()
-headless_options.add_argument('--headless')
+headless_options.add_argument("--headless")
+
 driver = webdriver.Chrome("../chromedriver", options=headless_options)
+driver.implicitly_wait(10)
 
 driver.get("https://www.tiketa.lt/EN/search")
-driver.implicitly_wait(10)
 
 actions = ActionChains(driver)
 

@@ -1,6 +1,9 @@
-# Why don't we start the range from 0? This would be the defaut in range()
-# function. Moreover, range() does not include the stop parameter's last
+# Why does print_list() not correctly print out the elements a_list?
+# Because the lenght of the list and the number of steps in range() do not
+# match. range() does not include the stop parameter's last
 # position.
+# Why don't we start the range from 0? This would be the defaut in range()
+# function.
 
 def print_list(a_list):
     for i in range(len(a_list)):

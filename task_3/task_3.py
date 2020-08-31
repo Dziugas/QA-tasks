@@ -1,4 +1,5 @@
 import time
+
 from selenium import webdriver
 
 
@@ -8,7 +9,7 @@ def highlight(element, seconds):
     def apply_style(s):
         driver.execute_script("arguments[0].setAttribute('style', arguments[1]);",
                               element, s)
-    original_style = element.get_attribute('style')
+    original_style = element.get_attribute("style")
     apply_style("background: blue; border: 2px solid black;")
     time.sleep(seconds)
     apply_style(original_style)
@@ -21,7 +22,7 @@ driver.implicitly_wait(10)
 # find the table
 table = driver.find_element_by_tag_name("table")
 
-table_head = driver.find_element_by_tag_name("thead")
+table_head = table.find_element_by_tag_name("thead")
 head_columns = table_head.find_elements_by_tag_name("th")
 
 # find indexes of each column where we want to find elements
